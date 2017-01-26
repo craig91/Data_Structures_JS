@@ -1,23 +1,23 @@
 function List() {
-  this.listSize = 0;
-  this.pos = 0;
-  this.dataStore = [],
-  this.clear = clear;
-  this.find = find;
-  this.toString = toString;
-  this.insert = insert;
-  this.append = append;
-  this.remove = remove;
-  this.front = front;
-  this.end = end;
-  this.prev = prev;
-  this.next = next;
+  this.listSize = 0; // The number of elements in this list.
+  this.pos = 0; // Current position in the list.
+  this.dataStore = [], // This empty array will store the elements appeneded to it.
+  this.clear = clear; // Clears all elements from the list.
+  this.find = find; // Finds an element in the list.
+  this.toString = toString; // Returns string representation of the list.
+  this.insert = insert; // inserts new element after existing element.
+  this.append = append; // Adds new element to the end of the list.
+  this.remove = remove; // Removes an element from the list.
+  this.front = front; // Set current position to first element of the list.
+  this.end = end; // Sets current position to last element of list.
+  this.prev = prev; // Moves current position back one element.
+  this.next = next; // moves current position forward one element.
+  this.length = length; // Returns the number of elements in the list.
+  this.currPos = currPos; // Returns the current position in list.
+  this.moveTo = moveTo; // Moves the current position to a specified position.
+  this.getElement = getElement; // Returns element at current position.
   this.length = length;
-  this.currPos = currPos;
-  this.moveTo = moveTo;
-  this.getElement = getElement;
-  this.length = length;
-  this.contains = contains;
+  this.contains = contains; // Checks to see if a particular value is in the list.
 }
 
 
