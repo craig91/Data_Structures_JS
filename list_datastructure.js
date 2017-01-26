@@ -64,4 +64,49 @@ function insert (element, after) {
   return false;
 }
 
+function clear() {
+  delete this.dataStore;
+  this.dataStore = [];
+  this.listSize = this.pos = 0;
+}
 
+function contains(element) {
+  for (var i = 0; i < this.dataStore.length; ++i) {
+    if (this.dataStore[i] == element) {
+      return true;
+    }
+  }
+  return false;
+}
+
+function front() {
+  this.pos = 0;
+}
+
+function end() {
+  this.pos = this.listSize -1;
+}
+
+function prev() {
+  if(this.pos > 0){
+    --this.pos;
+  }
+}
+
+function next() {
+  if (this.pos > 0) {
+    --this.pos;
+  }
+}
+
+function currPos() {
+  return this.pos;
+}
+
+function moveTo(position) {
+  this.pos = position;
+}
+
+function getElement() {
+  return this.dataStore[this.pos];
+}
