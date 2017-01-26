@@ -25,6 +25,9 @@ function append(element) {
   this.dataStore[this.listSize++] = element;
 }
 
+// The append function adds on an element to the front of the this.dataStore array by adding on the
+// this.listSize.
+
 function find(element) {
   for (var i = 0; i < this.dataStore.length; ++i) {
     if (this.dataStore[i] == element) {
