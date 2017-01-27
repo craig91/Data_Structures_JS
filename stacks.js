@@ -16,6 +16,3 @@ function push (element) {
   this.dataStore[this.top++] = element;
 }
 // Pushes an element to the top of the stack.(in the dataStore array)
-
-
-//blah l\b;aohsdasi'fapapfp
