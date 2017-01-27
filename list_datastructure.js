@@ -26,7 +26,7 @@ function append(element) {
 }
 
 // The append function adds on an element to the front of the this.dataStore array by adding on the
-// this.listSize.
+// this.listSize.1
 
 function find(element) {
   for (var i = 0; i < this.dataStore.length; ++i) {
@@ -36,6 +36,10 @@ function find(element) {
   }
   return -1;
 }
+
+// This function acts as a helper function to the remove function.
+// It will search through the data store array and then uses a conditional to find out if the
+// element exists in the data store array. If not return -1 which is saying that it is not there.
 
 
 function remove(element) {
@@ -47,6 +51,11 @@ function remove(element) {
   }
   return false;
 }
+
+// The remove function uses the position returned by find() and the splices the dataStore
+// array to that place. After the array is mutated, listSize is decremented by one to reflect the new size
+// of the list.
+
 
 function length() {
   return this.listSize;
