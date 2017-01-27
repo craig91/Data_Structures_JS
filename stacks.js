@@ -1,5 +1,5 @@
 // What is a stack? It is a list of elements that are accessible only from one end of the list.
-// That end of the list is called the top. The stack is known as LIFO (Last-in Firs-out)
+// That end of the list is called the top. The stack is known as LIFO (Last-in First-out)
 
 // Because of the LIFO nature, any element that is not currently at the top of the stack cannot be accessed.
 // In order to get to the element you want, you have to get rid of all the other elements above it first.
@@ -15,3 +15,4 @@ function Stack() {
 function push (element) {
   this.dataStore[this.top++] = element;
 }
+// Pushes an element to the top of the stack.(in the dataStore array)
