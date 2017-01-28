@@ -16,3 +16,10 @@ function push (element) {
   this.dataStore[this.top++] = element;
 }
 // Pushes an element to the top of the stack.(in the dataStore array)
+
+function pop() {
+  return this.dataStore[this.top - 1];
+}
+
+// The pop function does the reverse of the push function, it returns the element in the top position
+// of the stack and then decrements the top variable.
