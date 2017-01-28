@@ -23,3 +23,14 @@ function pop() {
 
 // The pop function does the reverse of the push function, it returns the element in the top position
 // of the stack and then decrements the top variable.
+
+
+function peek() {
+  return this.dataStore[this.top -1];
+}
+
+// The peek function returns the top element of the stack by accessing the element at the top -1 position
+// of the array.
+
+// If you call the peek() function on an empty stack, you get undefined as the result. Its undefined because
+// there is no element at the top of the stack.
