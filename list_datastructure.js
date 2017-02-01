@@ -92,6 +92,11 @@ function clear() {
   this.listSize = this.pos = 0;
 }
 
+// This function uses the delete operator to delete the dataStore array, and the next line re-creates the
+// empty array. The last line sets the values of listSize and pos to 0 to indicate the start of a new list.
+
+
+
 function contains(element) {
   for (var i = 0; i < this.dataStore.length; ++i) {
     if (this.dataStore[i] == element) {
@@ -100,6 +105,12 @@ function contains(element) {
   }
   return false;
 }
+
+// This function is useful when you want to check a list to see if a
+// particular value which is part of the list.
+
+
+// LIST TRAVERSAl //
 
 function front() {
   this.pos = 0;
