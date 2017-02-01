@@ -65,6 +65,10 @@ function toString() {
   return this.dataStore;
 }
 
+// the toString() allows me to view the elements of a list.
+// Strictly speaking, this function returns an array object and not a string,
+// but it is used for providing the current state of an object, and just returning the array works well for this.
+
 
 function insert (element, after) {
   var insertPos = this.find(after);
