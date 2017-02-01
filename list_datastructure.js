@@ -80,6 +80,12 @@ function insert (element, after) {
   return false;
 }
 
+// insert uses the helper function find() to determine the correct insertion position
+// for the new element by finding the specifified in the after argument.
+// Once the position is found, the splice() to insert the new element into the list.
+// Once that happens, I will incremement listSize by 1 and return true to indicate the insertion was successful.
+
+
 function clear() {
   delete this.dataStore;
   this.dataStore = [];
