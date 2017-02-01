@@ -37,3 +37,9 @@ stack.prototype.length = function(){
 }
 
 // The length function returns returns the amount of elements in the stack by returning the value of top.
+
+
+// How to use this stack :
+
+var something = new stack();
+// use prototype functions here.
