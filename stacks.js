@@ -31,3 +31,9 @@ stack.prototype.peek = function() {
 
 // If you call the peek() function on an empty stack, you get undefined as the result. Its undefined because
 // there is no element at the top of the stack.
+
+stack.prototype.length = function(){
+  return this.top;
+}
+
+// The length function returns returns the amount of elements in the stack by returning the value of top.
