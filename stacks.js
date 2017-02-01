@@ -7,17 +7,14 @@
 function Stack() {
   this.dataStore = []; // Stores the stack elements.
   this.top = 0; // keeps track of whats at the top of the stack
-  this.push = push; // pushes an element to the top of the stack
-  this.pop = pop; // removes an element from the top of the stack
-  this.peek = peek; // returns an element from the stack and returns it.
 }
 
-function push (element) {
+stack.prototype.push =  function(element) {
   this.dataStore[this.top++] = element;
 }
 // Pushes an element to the top of the stack.(in the dataStore array)
 
-function pop() {
+stack.prototype.pop = function() {
   return this.dataStore[this.top - 1];
 }
 
@@ -25,7 +22,7 @@ function pop() {
 // of the stack and then decrements the top variable.
 
 
-function peek() {
+stack.prototype.peek = function() {
   return this.dataStore[this.top -1];
 }
 
