@@ -27,11 +27,11 @@ function LLisst() {
 }
 
 LList.prototype.find(item) {
-  var currNode = this.head;
-  while(currNode.element != item) {
+  var currNode = this.head; // creates a new node and assign it as the head node.
+  while(currNode.element != item) { // loops through the linked list, moving one node to the next when the value of the current nodes's element property is not equal to the data we are  searching for.
     currNode = currNode.next;
   }
-  return currNode;
+  return currNode; // search is successful, returns the node storing the data, if not return null.
 }
 
 // The find function is a helper function for insert(). It searches through the linked list looking for the
