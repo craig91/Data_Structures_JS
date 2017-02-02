@@ -13,3 +13,26 @@ function Node(element) {
 
 // This is the node class. It consists of 2 properties, the element which stores the node's data &
 // next, which stores a link to the next node in the linked list.
+
+
+//// LINKED LIST CLASS ////
+
+// The linked list class provides functionality for a linked list.
+// The class includes functions for:
+// inserting new nodes, removing nodes, finding a particular data value in a list and a constructor for creating
+// a new linked list.
+
+function LLisst() {
+  this.head = new Node("head");
+}
+
+LList.prototype.find(item) {
+  var currNode = this.head;
+  while(currNode.element != item) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+
+// The find function is a helper function for insert(). It searches through the linked list looking for the
+// specified data. When the data is found, the function returns the node storing the data.
