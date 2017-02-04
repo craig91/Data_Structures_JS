@@ -36,3 +36,10 @@ LList.prototype.find(item) {
 
 // The find function is a helper function for insert(). It searches through the linked list looking for the
 // specified data. When the data is found, the function returns the node storing the data.
+
+LList.prototype.insert(newElement, item) {
+  var newNode = new Node(newElement);
+  var current = this.find(item);
+  newNode.next = current.next;
+  current.next = newNode;
+}
