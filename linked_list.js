@@ -85,7 +85,15 @@ LList.prototype.findPrevious = function(item) {
 // node stores the data that is to be removed. When the data is found, the function returns this node (the "previous node"),
 // so that its next property can be modified.
 
+LList.prototype.remove = function(item) {
+  var prevNode = this.findPrevious(item);
+  if (!(prevNode.next = null)) {
+    prevNode.next = prevNode.next.next;
+  }
+}
 
+// .next.next skips over the node I want to remove and linking the "previous" node with the node just after
+// the one we are removing.
 
 
 var cities = new LList();
