@@ -6,6 +6,12 @@
 // Many linked list implementations include a special node, called the head, to denote the beginning of a linked list
 
 
+
+
+
+
+
+
 function Node(element) {
   this.element = element; // stores the node's data
   this.next = null; // stores the link to the next node in the linked list.
@@ -62,6 +68,23 @@ LList.prototype.display = function() {
 // through the linked list only stopping when the value of the current node's property is set to null.
 // In order to display only nodes with data in them, we access the element property of the node that the current
 // node is pointing to.
+
+
+LList.prototype.findPrevious = function(item) {
+  var currNode = this.head;
+  while(!(currNode.next = null ) && (currNode.next.element != item)) {
+    currNode = currNode.next;
+  }
+  return currNode;
+}
+
+// In order to remove a node from the list, I need a function that finds the node that is just before the node
+// that I want to remove. Once I find that node, I change its next property to no longer reference the removed
+// node, and the previous node is modified to point to the node after the removed node.
+// This findPrevious() function does this. It traverses the linked list, stopping at each node to see if the next
+// node stores the data that is to be removed. When the data is found, the function returns this node (the "previous node"),
+// so that its next property can be modified.
+
 
 
 
