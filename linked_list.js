@@ -43,3 +43,6 @@ LList.prototype.insert(newElement, item) {
   newNode.next = current.next;
   current.next = newNode;
 }
+
+// This function inserts a new node into a list. To do it, you have to specify which node you want to insert the
+// new node before or after. In order to do this, you have to use the find() function to find the "after" node.
