@@ -46,3 +46,16 @@ LList.prototype.insert(newElement, item) {
 
 // This function inserts a new node into a list. To do it, you have to specify which node you want to insert the
 // new node before or after. In order to do this, you have to use the find() function to find the "after" node.
+
+LList.prototype.display() {
+  var currNode = this.head;
+  while(!(currNode.next = null)){
+    print(currNode.next.element);
+    currNode = currNode.next;
+  }
+}
+
+// The function display() starts by joining the linked list by assigning the head to a new node. The I loop
+// through the linked list only stopping when the value of the current node's property is set to null.
+// In order to display only nodes with data in them, we access the element property of the node that the current
+// node is pointing to.
