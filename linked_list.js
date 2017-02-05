@@ -11,6 +11,7 @@ function Node(element) {
   this.next = null; // stores the link to the next node in the linked list.
 }
 
+
 // This is the node class. It consists of 2 properties, the element which stores the node's data &
 // next, which stores a link to the next node in the linked list.
 
@@ -22,9 +23,11 @@ function Node(element) {
 // inserting new nodes, removing nodes, finding a particular data value in a list and a constructor for creating
 // a new linked list.
 
-function LLisst() {
+function LList() {
   this.head = new Node("head");
-}
+  // this.remove = remove;
+ }
+
 
 LList.prototype.find = function(item) {
   var currNode = this.head; // creates a new node and assign it as the head node.
@@ -59,3 +62,11 @@ LList.prototype.display = function() {
 // through the linked list only stopping when the value of the current node's property is set to null.
 // In order to display only nodes with data in them, we access the element property of the node that the current
 // node is pointing to.
+
+
+
+var cities = new LList();
+cities.insert("New York", "head");
+cities.insert("Long Island", "New York");
+cities.insert("Miami", "Florida");
+cities.display();
