@@ -26,7 +26,7 @@ function LLisst() {
   this.head = new Node("head");
 }
 
-LList.prototype.find(item) {
+LList.prototype.find = function(item) {
   var currNode = this.head; // creates a new node and assign it as the head node.
   while(currNode.element != item) { // loops through the linked list, moving one node to the next when the value of the current nodes's element property is not equal to the data we are  searching for.
     currNode = currNode.next;
@@ -37,7 +37,7 @@ LList.prototype.find(item) {
 // The find function is a helper function for insert(). It searches through the linked list looking for the
 // specified data. When the data is found, the function returns the node storing the data.
 
-LList.prototype.insert(newElement, item) {
+LList.prototype.insert = function(newElement, item) {
   var newNode = new Node(newElement);
   var current = this.find(item);
   newNode.next = current.next;
@@ -47,7 +47,7 @@ LList.prototype.insert(newElement, item) {
 // This function inserts a new node into a list. To do it, you have to specify which node you want to insert the
 // new node before or after. In order to do this, you have to use the find() function to find the "after" node.
 
-LList.prototype.display() {
+LList.prototype.display = function() {
   var currNode = this.head;
   while(!(currNode.next = null)){
     print(currNode.next.element);
